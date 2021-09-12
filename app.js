@@ -26,7 +26,7 @@ app.get('/trends/:id', async (req, res) => {
   const { id } = req.params;
 
   try {
-    const { data } = await api.get(`trends/place.json?id=${id}`);
+    const { data } = await twitterApi.get(`trends/place.json?id=${id}`);
     return res.send(data);
   } catch (error) {
     res.send({ error: error.message });
