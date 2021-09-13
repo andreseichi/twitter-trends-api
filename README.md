@@ -8,7 +8,7 @@
 
 `npm install`
 
-## Create a environment variable
+## Create an environment variable
 
 In the .env file, create a variable `TWITTER_BEARER_TOKEN` with the Bearer token with your twitter application
 
