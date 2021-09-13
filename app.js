@@ -9,7 +9,7 @@ const port = process.env.PORT || 3030;
 const cors = require('cors');
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://twitter-trends.netlify.app/'],
+  origin: ['http://localhost:3000', 'https://twitter-trends.netlify.app'],
   optionsSuccessStatus: 200,
 };
 
