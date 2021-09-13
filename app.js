@@ -14,7 +14,9 @@ const corsOptions = {
 };
 
 app.get('/', (req, res) => {
-  res.send('Welcome to my application 😃');
+  res.send(
+    'Welcome to my application 😃<br/>Use the route /trends to get global trends<br/>Or use /trends/id to get trends based on the woeid id',
+  );
 });
 
 // global trends
