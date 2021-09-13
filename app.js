@@ -6,12 +6,19 @@ const twitterApi = require('./api/twitter');
 const app = express();
 const port = process.env.PORT || 3030;
 
+const cors = require('cors');
+
+const corsOptions = {
+  origin: ['http://localhost:3000', 'https://epic-hermann-b52dc4.netlify.app/'],
+  optionsSuccessStatus: 200,
+};
+
 app.get('/', (req, res) => {
   res.send('Welcome to my application 😃');
 });
 
 // global trends
-app.get('/trends', async (req, res) => {
+app.get('/trends', cors(corsOptions), async (req, res) => {
   try {
     const { data } = await twitterApi.get('trends/place.json?id=1');
     return res.send(data);
@@ -21,7 +28,7 @@ app.get('/trends', async (req, res) => {
 });
 
 // trends woeid based
-app.get('/trends/:id', async (req, res) => {
+app.get('/trends/:id', cors(corsOptions), async (req, res) => {
   console.log(req.params.id);
   const { id } = req.params;
 
