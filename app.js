@@ -31,7 +31,6 @@ app.get('/trends', cors(corsOptions), async (req, res) => {
 
 // trends woeid based
 app.get('/trends/:id', cors(corsOptions), async (req, res) => {
-  console.log(req.params.id);
   const { id } = req.params;
 
   try {
