@@ -20,3 +20,5 @@ const corsOptions = {
   optionsSuccessStatus: 200,
 };
 ```
+
+## The route /trends get the global trends, and the route /trends/:id get dynamically trends based on the woeid
