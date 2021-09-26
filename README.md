@@ -15,7 +15,7 @@
 
 `git clone https://github.com/andreseichi/twitter-trends-api.git`
 
-### 📒 Acess the repo
+### 📒 Access the repo
 
 `cd twitter-trends-api`
 
